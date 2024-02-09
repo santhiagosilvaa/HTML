@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Santhiago Silva</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <!-- body é o corpo da pág-->
+<main>
 <body style="padding-bottom: 500px">
     <!-- tags são para editar o site. EX. <h1> xyz </h1> -> TITULO -->
     <h1>SSA 27</h1>
@@ -16,20 +18,20 @@
     <p>este texto está em <strong>NEGRITO</strong> e este <em>italico</em></p>
     
     <!-- IMAGENS E LINKS-->
-    <img src="imagemtj.webp" />
+    <img src="imagemtj.webp" alt="Fachada do TJ"/> <!-- alt para recursos de acessibilidade de imagem-->
     <img src="https://www.oabgo.org.br/arquivos/httpswww-16135414_g.png">
     <p>
-        <a href="https://www.google.com"
-        target="_blank">Google</a> <!-- target="_blank" é para abrir em outra aba-->
+        <a href="https://www.youtube.com/watch?v=yvCAX68TJMc"
+        target="_blank">CURSO HTML 5 INICIANTES</a> <!-- target="_blank" é para abrir em outra aba-->
     </p>
     
     <!-- LISTAS (ul -> lista não ordenada, pontos) (ol -> lista ordenada, numeros) (li -> itens)-->
-    <h3>LISTAS DE TAREFAS</h3>
+    <h3 id="meu_titulo">LISTAS DE TAREFAS</h3>
     <ul>
-        <li>Estudar HTML</li>
-        <li>Estudar CSS</li>
-        <li>Estudar Selenium</li>
-        <li>Criar automação</li>
+        <li class="item">Estudar HTML</li>
+        <li class="item">Estudar CSS</li>
+        <li class="item">Estudar Selenium</li>
+        <li class="item">Criar automação</li>
     </ul>
     <ol>
         <li>Fazer a massa</li>
@@ -54,19 +56,44 @@
         </tr>
     </table>
 
-    <!-- FORMULÁRIO -->
-    <form>
-        <input type="text" />
+    <!-- FORMULÁRIO (form - formulario) ()-->
+    <form action="/processar_form.php" method="POST"> <!-- action -> caminho que vai enviar o form; method -> POST - enviar e GET - receber-->
+        <input type="text" name="nome_completo" placeholder="Digite seu nome"/> <!-- Dica pro user do que fazer-->
         <br />
-        <textarea></textarea>
+        <textarea name="comentário" placeholder="Deixe um comentario"></textarea>
         <br />
-        <select>
+        <select name="marca_de_carro">
             <option>op1</option>
             <option>op2</option>
             <option>op3</option>
         </select>
         <br />
+        <input type="email" name="email">
         <input type="submit" value="Enviar">
     </form>
+
+    <!-- ELEMENTO DE BLOCO-->
+    <div> <!-- Cria um bloco/sessão para adc algo -->
+        <h3>Algum texto</h3>
+        <p>Algum conteudo</p>
+    </div>
+
+    <header> <!-- MARCA CABEÇALHO LOGAN-->
+        <h1>MARCA - CABEÇALHO</h1>
+        <a href="###">HOME</a>
+    </header>
+
+    <nav> <!-- BARRA DE NAVEGAÇÃO-->
+        <a href="##">HOME</a>
+        <a href="###">BLOG</a>
+    </nav>
+
+    <!-- <main> --Conteudo principal aqui dentro
+
+    </main> -->
+    <footer> <!--rodapé 2024-->
+        <p>rodapé 2024</p>
+    </footer>
+</main>    
 </body>
 </html>
